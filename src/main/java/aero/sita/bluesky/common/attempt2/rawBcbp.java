@@ -2,7 +2,7 @@ package aero.sita.bluesky.common.attempt2;
 
 import java.util.List;
 
-class RawBcbpGroup {
+class rawBcbp {
 
     private List<RawBcbpLeaf> leaves;
 
@@ -10,7 +10,7 @@ class RawBcbpGroup {
         return leaves;
     }
 
-    RawBcbpGroup(List<RawBcbpLeaf> leaves) {
+    rawBcbp(List<RawBcbpLeaf> leaves) {
         this.leaves = leaves;
     }
 

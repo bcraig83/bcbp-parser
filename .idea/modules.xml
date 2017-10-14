@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bcbpparser.iml" filepath="$PROJECT_DIR$/.idea/modules/bcbpparser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser.iml" filepath="$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser_main.iml" group="bcbpparser" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1409220439/projects-bcbpparser_test.iml" group="bcbpparser" />
     </modules>
   </component>
 </project>

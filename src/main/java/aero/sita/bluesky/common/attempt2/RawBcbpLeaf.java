@@ -1,5 +1,7 @@
 package aero.sita.bluesky.common.attempt2;
 
+import aero.sita.bluesky.common.attempt2.fields.RawBcbpField;
+
 class RawBcbpLeaf {
     private RawBcbpField field;
 

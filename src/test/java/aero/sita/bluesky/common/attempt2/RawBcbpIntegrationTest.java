@@ -27,15 +27,121 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseFormatCode() {
-        Assert.assertEquals("FormatCode", fixture.getLeaves().get(0).getName());
-        Assert.assertEquals("M", fixture.getLeaves().get(0).getContents());
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("FormatCode");
+
+        Assert.assertEquals("FormatCode", field.getName());
+        Assert.assertEquals("M", field.getContents());
     }
 
     @Test
     public void shouldParseNumberOfLegsEncoded() {
-        Assert.assertEquals("NumberOfLegsEncoded", fixture.getLeaves().get(1).getName());
-        Assert.assertEquals("1", fixture.getLeaves().get(1).getContents());
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("NumberOfLegsEncoded");
+
+        Assert.assertEquals("NumberOfLegsEncoded", field.getName());
+        Assert.assertEquals("1", field.getContents());
     }
 
+    @Test
+    public void shouldParsePassengerName() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("PassengerName");
 
+        Assert.assertEquals("PassengerName", field.getName());
+        Assert.assertEquals("DESMARAIS/LUC       ", field.getContents());
+    }
+
+    @Test
+    public void shouldParseElectronicTicketIndicator() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("ElectronicTicketIndicator");
+
+        Assert.assertEquals("ElectronicTicketIndicator", field.getName());
+        Assert.assertEquals("E", field.getContents());
+    }
+
+    @Test
+    public void shouldParseOperatingCarrierPnrCode() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("OperatingCarrierPnrCode");
+
+        Assert.assertEquals("OperatingCarrierPnrCode", field.getName());
+        Assert.assertEquals("ABC123 ", field.getContents());
+    }
+
+    @Test
+    public void shouldParseFromCityAirportCode() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("FromCityAirportCode");
+
+        Assert.assertEquals("FromCityAirportCode", field.getName());
+        Assert.assertEquals("YUL", field.getContents());
+    }
+
+    @Test
+    public void shouldParseToCityAirportCode() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("ToCityAirportCode");
+
+        Assert.assertEquals("ToCityAirportCode", field.getName());
+        Assert.assertEquals("FRA", field.getContents());
+    }
+
+    @Test
+    public void shouldParseOperatingCarrierDesignator() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("OperatingCarrierDesignator");
+
+        Assert.assertEquals("OperatingCarrierDesignator", field.getName());
+        Assert.assertEquals("AC ", field.getContents());
+    }
+
+    @Test
+    public void shouldParseFlightNumber() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("FlightNumber");
+
+        Assert.assertEquals("FlightNumber", field.getName());
+        Assert.assertEquals("0834 ", field.getContents());
+    }
+
+    @Test
+    public void shouldParseDateOfFlight() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("DateOfFlight");
+
+        Assert.assertEquals("DateOfFlight", field.getName());
+        Assert.assertEquals("226", field.getContents());
+    }
+
+    @Test
+    public void shouldParseCompartmentCode() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("CompartmentCode");
+
+        Assert.assertEquals("CompartmentCode", field.getName());
+        Assert.assertEquals("F", field.getContents());
+    }
+
+    @Test
+    public void shouldParseSeatNumber() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("SeatNumber");
+
+        Assert.assertEquals("SeatNumber", field.getName());
+        Assert.assertEquals("001A", field.getContents());
+    }
+
+    @Test
+    public void shouldParseCheckinSequenceNumber() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("CheckinSequenceNumber");
+
+        Assert.assertEquals("CheckinSequenceNumber", field.getName());
+        Assert.assertEquals("0025 ", field.getContents());
+    }
+
+    @Test
+    public void shouldParsePassengerStatus() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("PassengerStatus");
+
+        Assert.assertEquals("PassengerStatus", field.getName());
+        Assert.assertEquals("1", field.getContents());
+    }
+
+    @Test
+    public void shouldParseFieldSizeOfVaraibleSizeField() {
+        RawBcbpFieldParserDecorator field = fixture.getLeaves().get("FieldSizeOfVaraibleSizeField");
+
+        Assert.assertEquals("FieldSizeOfVaraibleSizeField", field.getName());
+        Assert.assertEquals("00", field.getContents());
+    }
 }

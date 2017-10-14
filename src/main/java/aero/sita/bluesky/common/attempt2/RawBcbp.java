@@ -1,21 +1,29 @@
 package aero.sita.bluesky.common.attempt2;
 
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class RawBcbp {
 
-    private List<RawBcbpFieldParserDecorator> leaves;
+    // TODO: shouldn't be a string - should use an enum as the key?
+    // If so, we don't need typed versions of the fields.
+    private Map<String, RawBcbpFieldParserDecorator> leafMap;
 
-    public RawBcbp(List<RawBcbpFieldParserDecorator> leaves) {
-        this.leaves = leaves;
+    public RawBcbp() {
+        leafMap = new LinkedHashMap<>();
     }
 
-    List<RawBcbpFieldParserDecorator> getLeaves() {
-        return leaves;
+    public void addLeaf(RawBcbpFieldParserDecorator leaf) {
+        leafMap.put(leaf.getName(), leaf);
+    }
+
+    Map<String, RawBcbpFieldParserDecorator> getLeaves() {
+        return leafMap;
     }
 
     String consume(String source) {
-        for (RawBcbpFieldParserDecorator leaf : leaves) {
+
+        for (RawBcbpFieldParserDecorator leaf : leafMap.values()) {
             source = leaf.consume(source);
         }
 

@@ -2,15 +2,23 @@ package aero.sita.bluesky.common.attempt2;
 
 import aero.sita.bluesky.common.attempt2.fields.RawBcbpField;
 
-class RawBcbpLeaf {
+public class RawBcbpFieldParserDecorator {
     private RawBcbpField field;
 
-    RawBcbpLeaf(RawBcbpField field) {
+    public RawBcbpFieldParserDecorator(RawBcbpField field) {
         this.field = field;
     }
 
-    RawBcbpField getField() {
-        return field;
+    public int getSize() {
+        return field.getSize();
+    }
+
+    public String getName() {
+        return field.getName();
+    }
+
+    public String getContents() {
+        return field.getContents();
     }
 
     String consume(String source) {

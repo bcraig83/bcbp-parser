@@ -17,7 +17,7 @@ public abstract class RawBcbpField {
         return name;
     }
 
-    String getContents() {
+    public String getContents() {
         return contents;
     }
 

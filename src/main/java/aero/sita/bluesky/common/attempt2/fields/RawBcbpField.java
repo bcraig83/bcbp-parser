@@ -5,7 +5,7 @@ public abstract class RawBcbpField {
     private String name;
     private String contents;
 
-    RawBcbpField() {
+    public RawBcbpField() {
         this.name = this.getClass().getSimpleName();
     }
 

@@ -9,7 +9,6 @@ public class RawBcbpIntegrationTest {
 
     private RawBcbpFactory factory = new Version5RawBcbpFactory();
 
-
     @Test
     public void shouldDoSimpleParse() {
         RawBcbp fixture = factory.create();

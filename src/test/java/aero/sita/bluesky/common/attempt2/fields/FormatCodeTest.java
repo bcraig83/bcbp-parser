@@ -1,5 +1,6 @@
 package aero.sita.bluesky.common.attempt2.fields;
 
+import aero.sita.bluesky.common.attempt2.fields.mandatory.FormatCode;
 import org.junit.Assert;
 import org.junit.Test;
 

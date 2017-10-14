@@ -2,11 +2,15 @@ package aero.sita.bluesky.common.attempt2;
 
 import aero.sita.bluesky.common.attempt2.fields.RawBcbpField;
 
-public class RawBcbpFieldParserDecorator {
+public class RawBcbpFieldParserDecorator extends RawBcbpField {
     private RawBcbpField field;
 
     public RawBcbpFieldParserDecorator(RawBcbpField field) {
         this.field = field;
+    }
+
+    public int getSize() {
+        return field.getSize();
     }
 
     public String getName() {

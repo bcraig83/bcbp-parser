@@ -2,6 +2,7 @@ package aero.sita.bluesky.common.attempt2;
 
 import aero.sita.bluesky.common.attempt2.factories.RawBcbpFactory;
 import aero.sita.bluesky.common.attempt2.factories.Version5RawBcbpFactory;
+import aero.sita.bluesky.common.attempt2.fields.RawBcbpField;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseFormatCode() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("FormatCode");
+        RawBcbpField field = fixture.getLeaf("FormatCode");
 
         Assert.assertEquals("FormatCode", field.getName());
         Assert.assertEquals("M", field.getContents());
@@ -34,7 +35,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseNumberOfLegsEncoded() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("NumberOfLegsEncoded");
+        RawBcbpField field = fixture.getLeaf("NumberOfLegsEncoded");
 
         Assert.assertEquals("NumberOfLegsEncoded", field.getName());
         Assert.assertEquals("1", field.getContents());
@@ -42,7 +43,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParsePassengerName() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("PassengerName");
+        RawBcbpField field = fixture.getLeaf("PassengerName");
 
         Assert.assertEquals("PassengerName", field.getName());
         Assert.assertEquals("DESMARAIS/LUC       ", field.getContents());
@@ -50,7 +51,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseElectronicTicketIndicator() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("ElectronicTicketIndicator");
+        RawBcbpField field = fixture.getLeaf("ElectronicTicketIndicator");
 
         Assert.assertEquals("ElectronicTicketIndicator", field.getName());
         Assert.assertEquals("E", field.getContents());
@@ -58,7 +59,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseOperatingCarrierPnrCode() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("OperatingCarrierPnrCode");
+        RawBcbpField field = fixture.getLeaf("OperatingCarrierPnrCode");
 
         Assert.assertEquals("OperatingCarrierPnrCode", field.getName());
         Assert.assertEquals("ABC123 ", field.getContents());
@@ -66,7 +67,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseFromCityAirportCode() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("FromCityAirportCode");
+        RawBcbpField field = fixture.getLeaf("FromCityAirportCode");
 
         Assert.assertEquals("FromCityAirportCode", field.getName());
         Assert.assertEquals("YUL", field.getContents());
@@ -74,7 +75,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseToCityAirportCode() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("ToCityAirportCode");
+        RawBcbpField field = fixture.getLeaf("ToCityAirportCode");
 
         Assert.assertEquals("ToCityAirportCode", field.getName());
         Assert.assertEquals("FRA", field.getContents());
@@ -82,7 +83,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseOperatingCarrierDesignator() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("OperatingCarrierDesignator");
+        RawBcbpField field = fixture.getLeaf("OperatingCarrierDesignator");
 
         Assert.assertEquals("OperatingCarrierDesignator", field.getName());
         Assert.assertEquals("AC ", field.getContents());
@@ -90,7 +91,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseFlightNumber() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("FlightNumber");
+        RawBcbpField field = fixture.getLeaf("FlightNumber");
 
         Assert.assertEquals("FlightNumber", field.getName());
         Assert.assertEquals("0834 ", field.getContents());
@@ -98,7 +99,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseDateOfFlight() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("DateOfFlight");
+        RawBcbpField field = fixture.getLeaf("DateOfFlight");
 
         Assert.assertEquals("DateOfFlight", field.getName());
         Assert.assertEquals("226", field.getContents());
@@ -106,7 +107,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseCompartmentCode() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("CompartmentCode");
+        RawBcbpField field = fixture.getLeaf("CompartmentCode");
 
         Assert.assertEquals("CompartmentCode", field.getName());
         Assert.assertEquals("F", field.getContents());
@@ -114,7 +115,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseSeatNumber() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("SeatNumber");
+        RawBcbpField field = fixture.getLeaf("SeatNumber");
 
         Assert.assertEquals("SeatNumber", field.getName());
         Assert.assertEquals("001A", field.getContents());
@@ -122,7 +123,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseCheckinSequenceNumber() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("CheckinSequenceNumber");
+        RawBcbpField field = fixture.getLeaf("CheckinSequenceNumber");
 
         Assert.assertEquals("CheckinSequenceNumber", field.getName());
         Assert.assertEquals("0025 ", field.getContents());
@@ -130,7 +131,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParsePassengerStatus() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("PassengerStatus");
+        RawBcbpField field = fixture.getLeaf("PassengerStatus");
 
         Assert.assertEquals("PassengerStatus", field.getName());
         Assert.assertEquals("1", field.getContents());
@@ -138,7 +139,7 @@ public class RawBcbpIntegrationTest {
 
     @Test
     public void shouldParseFieldSizeOfVaraibleSizeField() {
-        RawBcbpFieldParserDecorator field = fixture.getLeaf("FieldSizeOfVaraibleSizeField");
+        RawBcbpField field = fixture.getLeaf("FieldSizeOfVaraibleSizeField");
 
         Assert.assertEquals("FieldSizeOfVaraibleSizeField", field.getName());
         Assert.assertEquals("00", field.getContents());

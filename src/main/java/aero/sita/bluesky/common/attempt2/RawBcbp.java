@@ -1,5 +1,7 @@
 package aero.sita.bluesky.common.attempt2;
 
+import aero.sita.bluesky.common.attempt2.fields.RawBcbpField;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -17,7 +19,7 @@ public class RawBcbp {
         leafMap.put(leaf.getName(), leaf);
     }
 
-    RawBcbpFieldParserDecorator getLeaf(String key) {
+    RawBcbpField getLeaf(String key) {
         return leafMap.get(key);
     }
 

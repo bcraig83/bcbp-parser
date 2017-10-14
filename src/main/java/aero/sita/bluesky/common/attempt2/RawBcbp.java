@@ -17,8 +17,8 @@ public class RawBcbp {
         leafMap.put(leaf.getName(), leaf);
     }
 
-    Map<String, RawBcbpFieldParserDecorator> getLeaves() {
-        return leafMap;
+    RawBcbpFieldParserDecorator getLeaf(String key) {
+        return leafMap.get(key);
     }
 
     String consume(String source) {

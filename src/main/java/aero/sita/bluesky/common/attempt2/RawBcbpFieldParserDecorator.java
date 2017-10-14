@@ -9,10 +9,6 @@ public class RawBcbpFieldParserDecorator {
         this.field = field;
     }
 
-//    public int getSize() {
-//        return field.getSize();
-//    }
-
     public String getName() {
         return field.getName();
     }

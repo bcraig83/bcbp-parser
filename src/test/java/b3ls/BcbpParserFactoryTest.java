@@ -5,7 +5,6 @@ import org.junit.Test;
 
 public class BcbpParserFactoryTest {
 
-
     @Test
     public void shouldBuildSomething() {
         BcbpParserFactory factory = new StandardBcbpParserFactory();
